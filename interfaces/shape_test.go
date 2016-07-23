@@ -23,8 +23,8 @@ func TestAreaofRectangle(t *testing.T) {
 func TestAreaofComplexShape(t *testing.T) {
 	s := Square{side: 10}
 	r := Rectangle{length: 2, breadth: 3}
-
-	h := Hybrid{s, r}
+	shapeSlices := []Shape{s, r}
+	h := Hybrid{shapeSlices}
 	result := h.Area()
 
 	if result != 106 {
